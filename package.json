@@ -1,0 +1,33 @@
+{
+  "name": "zentimer",
+  "version": "1.0.0",
+  "description": "Productivity and Relaxation Timer App",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": ["productivity", "timer", "electron"],
+  "author": "Yash Sonavane[YashCyanide]",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "electron-store": "^10.0.0"
+  },
+  "build": {
+    "appId": "com.yourcompany.zentimer",
+    "productName": "ZenTimer",
+    "mac": {
+      "category": "public.app-category.productivity"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
