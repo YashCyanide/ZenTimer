@@ -1,41 +1,94 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>ZenTimer</title>-->
+<!--    <link rel="stylesheet" href="styles.css">-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="container">-->
+<!--    <h1>ZenTimer</h1>-->
+
+<!--    <div class="timer-display" id="timer">00:00:00</div>-->
+
+<!--    <div class="timer-controls">-->
+<!--        <div class="time-input">-->
+<!--            <label>Hours:</label>-->
+<!--            <input type="number" id="hours" min="0" max="24">-->
+
+<!--            <label>Minutes:</label>-->
+<!--            <input type="number" id="minutes" min="0" max="59">-->
+<!--        </div>-->
+
+<!--        <div class="action-select">-->
+<!--            <label>End of Timer Action:</label>-->
+<!--            <select id="end-action">-->
+<!--                <option value="none">Do Nothing</option>-->
+<!--                <option value="shutdown">System Shutdown</option>-->
+<!--                <option value="sleep">System Sleep</option>-->
+<!--                <option value="motivate">Play Motivation Video</option>-->
+<!--                <option value="relax">Open Relaxation Playlist</option>-->
+<!--                <option value="quote">Show Motivational Quote</option>-->
+<!--            </select>-->
+<!--        </div>-->
+
+<!--        <div class="timer-buttons">-->
+<!--            <button id="start-btn">Start</button>-->
+<!--            <button id="pause-btn" disabled>Pause</button>-->
+<!--            <button id="reset-btn" disabled>Reset</button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<script src="renderer.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZenTimer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
-    <h1>ZenTimer</h1>
+<div class="zen-container">
+    <div class="timer-card">
+        <h1 class="app-title">ZenTimer</h1>
 
-    <div class="timer-display" id="timer">00:00:00</div>
+        <div class="timer-display" id="timer">00:00:00</div>
 
-    <div class="timer-controls">
-        <div class="time-input">
-            <label>Hours:</label>
-            <input type="number" id="hours" min="0" max="24">
+        <div class="timer-controls">
+            <div class="time-inputs">
+                <div class="input-group">
+                    <label for="hours">Hours</label>
+                    <input type="number" id="hours" min="0" max="24" placeholder="0">
+                </div>
+                <div class="input-group">
+                    <label for="minutes">Minutes</label>
+                    <input type="number" id="minutes" min="0" max="59" placeholder="0">
+                </div>
+            </div>
 
-            <label>Minutes:</label>
-            <input type="number" id="minutes" min="0" max="59">
-        </div>
+            <div class="action-select">
+                <label for="end-action">End of Timer Action</label>
+                <select id="end-action">
+                    <option value="none">Do Nothing</option>
+                    <option value="shutdown">System Shutdown</option>
+                    <option value="sleep">System Sleep</option>
+                    <option value="motivate">Play Motivation Video</option>
+                    <option value="relax">Open Relaxation Playlist</option>
+                    <option value="quote">Show Motivational Quote</option>
+                </select>
+            </div>
 
-        <div class="action-select">
-            <label>End of Timer Action:</label>
-            <select id="end-action">
-                <option value="none">Do Nothing</option>
-                <option value="shutdown">System Shutdown</option>
-                <option value="sleep">System Sleep</option>
-                <option value="motivate">Play Motivation Video</option>
-                <option value="relax">Open Relaxation Playlist</option>
-                <option value="quote">Show Motivational Quote</option>
-            </select>
-        </div>
-
-        <div class="timer-buttons">
-            <button id="start-btn">Start</button>
-            <button id="pause-btn" disabled>Pause</button>
-            <button id="reset-btn" disabled>Reset</button>
+            <div class="timer-buttons">
+                <button id="start-btn" class="btn start">Start</button>
+                <button id="pause-btn" class="btn pause" disabled>Pause</button>
+                <button id="reset-btn" class="btn reset" disabled>Reset</button>
+            </div>
         </div>
     </div>
 </div>
